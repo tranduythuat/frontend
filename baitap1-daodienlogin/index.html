@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>  
+    <div class="container">
+		<div class="left">
+			<h1> Learn to code by<br> watching others</h1>
+			<p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+				but understanding how developers think is invaluable.</p>
+		</div>
+		<div class="right">
+            <div class="form-content">
+				<button class="btn btn-before"><b>Try it free 7 days</b> <span>then $20/mo. thereafter</span></button>
+				<form action="javascript:submitForm();" method="GET">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="First Name" id="First_Name">
+						<span id="note1" class="note"> </span>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Last Name" id="Last_Name">
+						<span id="note2" class="note"></span>
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control" placeholder="Email Address" id="email">
+						<span id="note3" class="note"></span>
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" placeholder="Password" id="password">
+						<span id="note4" class="note"></span>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-submit" onclick="submitForm()">Claim your free trial</button>
+					</div>
+					<div class="form-group">
+                        <div class="footer">
+                            <small>By clicking the button, you are agreeing to our
+                                <a class="text-link" href="">Terms and Services</a>
+                            </small>
+                        </div>	
+					</div>
+				</form>
+            </div>
+        </div>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> 
+<script src="./js/script.js"></script>
+</html>
