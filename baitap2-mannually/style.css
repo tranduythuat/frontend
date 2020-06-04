@@ -56,8 +56,9 @@ h2 {
   transition: .4s;
 }
 
-input:checked + .slider {
-  background-color: #696fdd;
+input:hover + .slider {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to bottom right, #a3a8f0, #696fdd);
 }
 
 input:focus + .slider {
