@@ -27,6 +27,7 @@ div.left>h1{
 }
 
 div.left>p{
+    
     word-spacing: 3px;
     letter-spacing: 2px;
     color: rgb(255, 255, 255);
@@ -42,6 +43,7 @@ div.right{
 }
 .form-content{
     max-width: 480px;
+    margin-bottom: 80px;
 }
 
 form{
@@ -123,13 +125,17 @@ form{
     color: rgba(179, 255, 0, 0.829);
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 945px) {
     .container {   
         flex-direction: column;
+        width: 500px;
     }
-
-    div.left, .right{
-        margin: 10px;
+    div.left{
+        margin: 0px 177px;
+    }
+    div.right {
+        min-width: 459px;
+        margin-left: 142px;
     }
 
     div.left p {

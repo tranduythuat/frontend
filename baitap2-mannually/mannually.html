@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <title>Exercise</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <section class="header-content">
         <h2>Our Pricing</h2>
-        <div class="content-top">
+        <div class="btn-group">
             <div class="content-left">
                 <p>Annually</p>
             </div>
@@ -23,57 +24,58 @@
                 <p>Monthly</p>
             </div>
         </div>
-        <div class="item-content">
-            <div class="item-basic">
-                <h3>Basic</h3>
-                <div class="item item-money item01"></div>
-                <hr>
-                <div class="item">500 GB Storage</div>
-                <hr>
-                <div class="item">2 Users Allowed</div>
-                <hr>
-                <div class="item">Send up to 3 GB</div>
-                <hr>
-                <div class="item">
-                    <input type="button" class="btn-control btn-top" value="LEARN MORE">
-                </div>
-            </div>
-            <div class="item-professional">
-                <h3>Professional</h3>
-                <div class="item item-money item02"></div>
-                <hr>
-                <div class="item">1 TB Storage</div>
-                <hr>
-                <div class="item">5 Users Allowed</div>
-                <hr>
-                <div class="item">Send up to 10 GB</div>
-                <hr>
-                <div class="item">
-                    <input type="button" class="btn-control btn-mid" value="LEARN MORE">
-                </div>
-            </div>
-            <div class="item-master">
-                <h3>Master</h3>
-                <div class="item item-money item03"></div>
-                <hr>
-                <div class="item">2 TB Storage</div>
-                <hr>
-                <div class="item">10 Users Allowed</div>
-                <hr>
-                <div class="item">Send up to 20 GB</div>
-                <hr>
-                <div class="item">
-                    <input type="button" class="btn-control btn-bot" value="LEARN MORE">
-                </div>
+    </section>
+    <section class="item-content">
+        <div class="item-basic">
+            <h3>Basic</h3>
+            <div class="item item-money item01"></div>
+            <hr>
+            <div class="item">500 GB Storage</div>
+            <hr>
+            <div class="item">2 Users Allowed</div>
+            <hr>
+            <div class="item">Send up to 3 GB</div>
+            <hr>
+            <div class="item">
+                <input type="button" class="btn-control btn-top" value="LEARN MORE">
             </div>
         </div>
-    </div>
+        <div class="item-professional">
+            <h3>Professional</h3>
+            <div class="item item-money item02"></div>
+            <hr>
+            <div class="item">1 TB Storage</div>
+            <hr>
+            <div class="item">5 Users Allowed</div>
+            <hr>
+            <div class="item">Send up to 10 GB</div>
+            <hr>
+            <div class="item">
+                <input type="button" class="btn-control btn-mid" value="LEARN MORE">
+            </div>
+        </div>
+        <div class="item-master">
+            <h3>Master</h3>
+            <div class="item item-money item03"></div>
+            <hr>
+            <div class="item">2 TB Storage</div>
+            <hr>
+            <div class="item">10 Users Allowed</div>
+            <hr>
+            <div class="item">Send up to 20 GB</div>
+            <hr>
+            <div class="item">
+                <input type="button" class="btn-control btn-bot" value="LEARN MORE">
+            </div>
+        </div>
+    </section>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){
        
         var value = $('#switch').prop('checked');
+        
         if(value){
             $('.item01').html('<span class="dolar">$</span>19.99');
             $('.item02').html('<span class="dolar">$</span>24.99');

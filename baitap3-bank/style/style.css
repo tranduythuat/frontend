@@ -12,31 +12,4 @@
   border-radius: 2rem;
   border: none;
 }
-.box { 
-    background-color: red;
-    border: 1px solid #ccc; 
-    min-height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
-.box div { 
-    text-align: center; 
-    background-color: #72C953;
-} 
-.box div:nth-child(1) { 
-    height: 70px; 
-    width: 70px; 
-    line-height: 70px;
-} 
-.box div:nth-child(2) { 
-    height: 75px; 
-    width: 50px; 
-    line-height: 50px;
-} 
-.box div:nth-child(3) { 
-    height: 70px; 
-    width: 30px; 
-    line-height: 30px;
-}
 /*# sourceMappingURL=style.css.map */
