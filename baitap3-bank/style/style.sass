@@ -16,18 +16,297 @@ $font-family: 'Public Sans', sans-serif
 $mobile: 375px
 $desktop: 1440px
 
-// button
-.btn-request 
-    margin: auto
-    .btn-success
-        color: $white
-        font-size: $font-size
-        width: 180px
-        height: 50px
-        background-image: $gradient-btn
-        border-radius: 2rem
-        border: none
-// card icon
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
 
+html, body
+    max-width: $desktop
+    margin: 0 auto
+    font-size: $font-size
+    font-family: $font-family  
+
+.slider
+    position: relative
+    display: grid
+    grid-template-columns: 50% 50%
+    grid-template-rows: 700px
+    background: url('../images/bg-intro-desktop.svg') no-repeat
+    background-attachment: local
+    background-size: inherit
+    background-position: 40vw -150px
+    background-color: $very-light-gray
+    .slider-left
+        padding: 35% 15%
+        .slider-content-left
+            h1
+                font-weight: 100
+                font-size: 55px
+                color: $dark-blue
+            p
+                margin-top: 1rem 
+                color: $grayish-blue
+            .btn-request
+                margin-top: 1rem
+                
+    .slider-right
+        position: relative
+        width: 100%
+        .mock-box-image
+            height: 900px
+            position: absolute
+            right: -120px
+            top: -100px
+
+.btn-request
+    padding-top: 1.2rem
+    .btn
+        text-decoration: none
+        background-image: $gradient-btn
+        padding: .7rem 1rem
+        border-radius: 25px
+        color: $white
+.header
+    position: relative
+    top: 0
+    width: 100%
+    background-color: white
+    z-index: 1000
+    .container
+        display: grid
+        grid-template-columns: auto auto auto   
+        justify-content: space-around
+        align-content: center
+        height: 60px
+        .logo
+            padding-top: 1rem
+
+        .navbar
+            display: flex
+            .navbar-item
+                display: block
+                padding: 1.3rem
+                font-size: 16px
+                text-decoration: none
+                position: relative  
+            .navbar-item::after
+                content: ''
+                width: 0%
+                height: 5px
+                background-image: $gradient-btn
+                position: absolute
+                bottom: 0%   
+                left: 50%
+                border-radius: 10px
+                transition: all 500ms ease
+            .navbar-item:not(#icon-image):hover::after
+                left: 0%
+                width: 100%
+            .navbar-item:last-child
+                display: none
+            
+.icon-card
+    background-color: $light-grayish-blue
+    padding: 8%
+    .icon-card-title
+        .content
+            span
+                font-size: 40px
+                color: $dark-blue
+            p
+                max-width: 56%
+                margin-top: 2rem
+                color: $grayish-blue
+    .icon-card-desc
+        margin-top: 3rem
+        .content
+            display: grid
+            grid-gap: 1rem
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            width: 100%
+        
+        .icon-image
+            width: 100%
+            height: 70px
+            margin-top: 1rem
+        h3
+            padding-top: 2rem
+            color:  $dark-blue
+        .content-desc
+            padding-top: 1.5rem
+            color: $grayish-blue
+
+.image-card         
+    background-color: $very-light-gray
+    padding: 8%
+    .container
+        max-width: 100%
+    .card-title
+        h2
+            font-size: 40px
+            font-weight: 100
+            color: $dark-blue
+    .image-card-desc
+        padding-top: 3rem
+        .content
+            display: grid
+            grid-gap: 1rem
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            justify-content: space-between
+            align-item: stretch
+            .image-item
+                width: 100%
+                img
+                    border-radius: .4rem .4rem 0 0
+                    width: 100%
+                    height: 180px
+                    object-fit: cover   
+    .image-desc-item
+        padding: 1.5rem
+        background-color: $white
+        span
+            font-size: 13px
+            color: $grayish-blue   
+        a 
+            text-decoration: none
+            display: block
+            margin-top: 1.3rem
+            h4
+                font-weight: 600
+                color: $dark-blue
+        p
+            display: block
+            padding-top: 1rem
+            color: $grayish-blue   
+
+
+.footer-left 
+    grid-area: left
+.about-info 
+    grid-area: about
+.about-desc 
+    grid-area: desc
+.footer-right 
+    grid-area: right
+    text-align: right
+    .right-reserved
+        margin-top: 2em
+        color: $grayish-blue
+        
+
+footer
+    padding: 5% 8%
+    background-color: $dark-blue
+    color: $white
+    .container
+        display: grid
+        grid-template-areas: "left about desc right right right" "left about desc right right right" "left about desc right right right"
+        span
+            display: block       
+            margin: 1em
+        .footer-left 
+            // text-align: left
+            padding-top: 1rem
+            .logo
+                img
+                    width: 70%
+            .footer-icon
+                margin-top: 2rem    
+                img
+                    margin: .5rem        
+
+.modal
+    display: none
+@media only screen and (max-width: 600px) 
+    body,html
+        width: 100%
+        
+
+    .icon-card, .image-card, footer, header, .slider
+        width: 500px
+        margin-left: 0rem
+        text-align: center
+
+    .icon-card 
+        .container 
+            .content
+                grid-template-columns: none
+                grid-template-rows: auto
+    .icon-card .icon-card-title .content p
+        max-width: 100%        
+    .image-card
+        .container
+            .content
+                grid-template-columns: none
+                grid-template-rows: auto
+
+    footer
+        .container
+            grid-template-areas: "left" "about" "desc" "right"
+            .footer-right
+                text-align: center
+
+    .slider
+        background-image: url('../images/bg-intro-mobile.svg')
+        background-position: top    
+        background-size: contain    
+        grid-template-columns: none
+        // grid-template-rows: auto
+        display: flex
+        flex-direction: column-reverse
+        .slider-right
+            text-align: center
+            .mock-box-image
+                position: absolute
+                height: 580px
+                left: 15px
+        .slider-left
+            padding: 530px 50px 100px 50px
+            text-align: center
+            .slider-content-left
+
+                h1
+                    font-size: 40px
+    .header
+        .container
+            .logo
+                position: absolute
+                left: 10px
+                text-align: left
+                float: left
+            .navbar
+                .navbar-item
+                    display: none
+                #icon-image
+                    display: initial	 
+                    position: absolute
+                    right: -100px
+                    top: 0
+            .btn-request
+                .btn
+                    display: none
+    #icon-close
+        display: none
+
+    .modal
+        position: absolute
+        width: 100%
+        height: auto
+        top: 80px
+        left: 60px
+        background-color: $white
+        display: block
+        z-index: 1000
+        background-image: linear-gradient(to right, rgba(88,37,123,0),rgba(88,37,123,1))
+        .navbar
+            padding: 15px
+            background-color: $white
+            border-radius: .3rem
+            a
+                display: block
+                text-decoration: none
+                margin: 1.5rem
+                text-align: center
+                color: $dark-blue   
     
-          
